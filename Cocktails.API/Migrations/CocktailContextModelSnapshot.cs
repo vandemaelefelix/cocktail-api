@@ -86,6 +86,25 @@ namespace Cocktails.API.Migrations
                     b.ToTable("CocktailCategories");
                 });
 
+            modelBuilder.Entity("Cocktails.API.Models.CocktailImage", b =>
+                {
+                    b.Property<Guid>("CocktailImageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CocktailId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CocktailImageId");
+
+                    b.HasIndex("CocktailId");
+
+                    b.ToTable("CocktailImages");
+                });
+
             modelBuilder.Entity("Cocktails.API.Models.CocktailIngredient", b =>
                 {
                     b.Property<Guid>("CocktailId")
@@ -123,21 +142,21 @@ namespace Cocktails.API.Migrations
                     b.HasData(
                         new
                         {
-                            IngredientId = new Guid("0fed5428-0694-4db8-a896-6b48787a9abb"),
+                            IngredientId = new Guid("476b80ee-8ac4-46ea-8044-71ffc4d2b2cf"),
                             AlcoholPercentage = 41,
                             Description = "Alcoholic substance drunk by pirates",
                             Name = "Rum"
                         },
                         new
                         {
-                            IngredientId = new Guid("0330d1dc-2cb7-407c-8ad8-b52d8ec2cb54"),
+                            IngredientId = new Guid("45aae9bf-3870-4dd2-9cb2-ab099ce7818e"),
                             AlcoholPercentage = 39,
                             Description = "Alcoholic substance drunk by Russians",
                             Name = "Vodka"
                         },
                         new
                         {
-                            IngredientId = new Guid("c18fe643-3e99-46b0-8fc3-958554d434e8"),
+                            IngredientId = new Guid("718e4406-ac27-4a49-9b24-4e03578f1899"),
                             AlcoholPercentage = 38,
                             Description = "Alcoholic substance drunk by Alcoholics",
                             Name = "Gin"
@@ -159,6 +178,15 @@ namespace Cocktails.API.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Cocktails.API.Models.CocktailImage", b =>
+                {
+                    b.HasOne("Cocktails.API.Models.Cocktail", null)
+                        .WithMany("Images")
+                        .HasForeignKey("CocktailId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Cocktails.API.Models.CocktailIngredient", b =>
@@ -188,6 +216,8 @@ namespace Cocktails.API.Migrations
                     b.Navigation("CocktailCategories");
 
                     b.Navigation("CocktailIngredients");
+
+                    b.Navigation("Images");
                 });
 
             modelBuilder.Entity("Cocktails.API.Models.Ingredient", b =>

@@ -35,7 +35,6 @@ namespace Cocktails.API.Repositories
         public async Task<Category> GetCategory(int categoryId) {
             try
             {
-                // return await _context.Category.
                 return await _context.Category.Where(c => c.CategoryId == categoryId).SingleOrDefaultAsync(); 
             }
             catch (System.Exception)

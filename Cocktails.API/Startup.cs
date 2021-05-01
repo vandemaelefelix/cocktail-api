@@ -50,6 +50,7 @@ namespace Cocktails.API
             services.AddTransient<ICocktailRepository, CocktailRepository>();
             
             services.AddTransient<ICocktailService,CocktailService>();
+            services.AddTransient<IBlobService,BlobService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

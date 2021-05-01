@@ -13,5 +13,6 @@ namespace Cocktails.API.Models
         public bool Alcoholic { get; set; }
         public List<CocktailCategory> CocktailCategories { get; set; }
         public List<CocktailIngredient> CocktailIngredients { get; set; }
+        public List<CocktailImage> Images { get; set; }
     }
 }

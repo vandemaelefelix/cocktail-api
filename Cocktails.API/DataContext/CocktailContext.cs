@@ -15,6 +15,7 @@ namespace Cocktails.API.DataContext
         DbSet<Category> Category { get; set; }
         DbSet<Ingredient> Ingredient { get; set; }
         DbSet<Cocktail> Cocktails { get; set; }
+        DbSet<CocktailImage> CocktailImages { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
@@ -25,6 +26,7 @@ namespace Cocktails.API.DataContext
         public DbSet<Cocktail> Cocktails { get; set; }
         public DbSet<CocktailCategory> CocktailCategories { get; set; }
         public DbSet<CocktailIngredient> CocktailIngredients { get; set; }
+        public DbSet<CocktailImage> CocktailImages { get; set; }
 
         private ConnectionStrings _connectionStrings;
 

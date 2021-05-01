@@ -22,16 +22,18 @@ namespace Cocktails.API.Services
     }
     public class CocktailService : ICocktailService
     {
+        private IBlobService _blobService;
         private IMapper _mapper;
         private ICategoryRepository _categoryRepository;
         private IIngredientRepository _ingredientRepository;
         private ICocktailRepository _cocktailRepository;
 
-        public CocktailService(IMapper mapper, ICategoryRepository categoryRepository, IIngredientRepository ingredientRepository, ICocktailRepository cocktailRepository) { //, ICocktailRepository cocktailRepository
+        public CocktailService(IMapper mapper, ICategoryRepository categoryRepository, IIngredientRepository ingredientRepository, ICocktailRepository cocktailRepository, IBlobService blobService) {
             _mapper = mapper;
             _categoryRepository = categoryRepository;
             _ingredientRepository = ingredientRepository;
             _cocktailRepository = cocktailRepository;
+            _blobService = blobService;
         }
 
         public async Task<List<CategoryDTO>> GetCategories() {
@@ -75,6 +77,9 @@ namespace Cocktails.API.Services
         public async Task<CocktailDTO> AddCocktail(CocktailDTO cocktail) {
             try
             {
+                string containerName = "cocktail-images";
+                byte[] bytes = System.Convert.FromBase64String(cocktail.ImageEncoded);
+
                 Cocktail newCocktail = _mapper.Map<Cocktail>(cocktail);
                 
                 newCocktail.CocktailCategories = new List<CocktailCategory>();
@@ -88,6 +93,11 @@ namespace Cocktails.API.Services
                 }
 
                 await _cocktailRepository.AddCocktail(newCocktail);
+
+                string fileName = $"{Guid.NewGuid()}.{cocktail.Extension}";
+                await _blobService.UploadByteArray(containerName, bytes, fileName);
+                // await _cocktailRepository.AddCocktailImage(new CocktailImage() { CocktailImageId = newCocktail.CocktailId, Name = fileName });
+                await _cocktailRepository.AddCocktailImage(new CocktailImage() { CocktailId = newCocktail.CocktailId, Name = fileName });
 
                 return cocktail;
             }
