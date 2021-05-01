@@ -20,6 +20,7 @@ namespace Cocktails.API.Services
         Task<Cocktail> GetCocktail(Guid cocktailId);
         Task<List<Cocktail>> GetCocktails();
         Task<CocktailDTO> AddCocktail(CocktailDTO cocktail);
+        Task<Guid> DeleteCocktail(Guid cocktailId);
         Task<AddIngredientDTO> AddIngredient(AddIngredientDTO ingredient);
     }
     public class CocktailService : ICocktailService
@@ -74,6 +75,12 @@ namespace Cocktails.API.Services
                 Console.Write(ex);
                 throw ex;
             }
+        }
+
+        public async Task<Guid> DeleteCocktail(Guid cocktailId) {
+            await _cocktailRepository.DeleteCocktail(cocktailId);
+
+            return cocktailId;
         }
 
         public async Task<CocktailDTO> AddCocktail(CocktailDTO cocktail) {

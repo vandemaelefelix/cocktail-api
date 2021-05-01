@@ -11,6 +11,7 @@ namespace Cocktails.API.Services
     public interface IBlobService
     {
         Task UploadByteArray(string containerName, byte[] data, string fileName);
+        Task DeleteBlob(string containerName, string fileName);
     }
 
     public class BlobService : IBlobService
@@ -38,6 +39,24 @@ namespace Cocktails.API.Services
                 {
                     await blockBlob.UploadFromByteArrayAsync(data, 0, data.Length);
                 }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+        }
+
+        public async Task DeleteBlob(string containerName, string fileName) 
+        {
+            try
+            {
+                BlobStorage.CloudStorageAccount storageAccount = BlobStorage.CloudStorageAccount.Parse(_connectionStrings.BlobStorage);
+                CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+                CloudBlobContainer container = blobClient.GetContainerReference(containerName);
+                CloudBlockBlob blob = container.GetBlockBlobReference(fileName);
+
+                await blob.DeleteIfExistsAsync();
             }
             catch (Exception ex)
             {

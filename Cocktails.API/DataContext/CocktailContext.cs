@@ -71,27 +71,27 @@ namespace Cocktails.API.DataContext
             // });
 
 
-            // modelBuilder.Entity<Ingredient>().HasData(new Ingredient()
-            // {
-            //     IngredientId = Guid.NewGuid(),
-            //     Name = "Rum",
-            //     Description = "Alcoholic substance drunk by pirates",
-            //     AlcoholPercentage = 41
-            // });
-            // modelBuilder.Entity<Ingredient>().HasData(new Ingredient()
-            // {
-            //     IngredientId = Guid.NewGuid(),
-            //     Name = "Vodka",
-            //     Description = "Alcoholic substance drunk by Russians",
-            //     AlcoholPercentage = 39
-            // });
-            // modelBuilder.Entity<Ingredient>().HasData(new Ingredient()
-            // {
-            //     IngredientId = Guid.NewGuid(),
-            //     Name = "Gin",
-            //     Description = "Alcoholic substance drunk by Alcoholics",
-            //     AlcoholPercentage = 38
-            // });
+            modelBuilder.Entity<Ingredient>().HasData(new Ingredient()
+            {
+                IngredientId = Guid.NewGuid(),
+                Name = "Rum",
+                Description = "Alcoholic substance drunk by pirates",
+                AlcoholPercentage = 41
+            });
+            modelBuilder.Entity<Ingredient>().HasData(new Ingredient()
+            {
+                IngredientId = Guid.NewGuid(),
+                Name = "Vodka",
+                Description = "Alcoholic substance drunk by Russians",
+                AlcoholPercentage = 39
+            });
+            modelBuilder.Entity<Ingredient>().HasData(new Ingredient()
+            {
+                IngredientId = Guid.NewGuid(),
+                Name = "Gin",
+                Description = "Alcoholic substance drunk by Alcoholics",
+                AlcoholPercentage = 38
+            });
         }
     }
 }

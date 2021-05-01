@@ -148,5 +148,19 @@ namespace Cocktails.API.Controllers
             }
         }
 
+        [HttpDelete]
+        [Route("cocktails/{cocktailId}")]
+        public async Task<ActionResult<Cocktail>> DeleteCocktail(Guid cocktailId)
+        {
+            try
+            {
+                return new OkObjectResult(await _cocktailService.DeleteCocktail(cocktailId));
+            }
+            catch (System.Exception ex)
+            {
+                Console.Write(ex);
+                throw ex;
+            }
+        }
     }
 }

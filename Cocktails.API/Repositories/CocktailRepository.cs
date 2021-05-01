@@ -1,9 +1,11 @@
+using System.Net.Mime;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Cocktails.API.DataContext;
 using Cocktails.API.Models;
+using Cocktails.API.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cocktails.API.Repositories
@@ -14,13 +16,16 @@ namespace Cocktails.API.Repositories
         Task AddCocktailImage(CocktailImage cocktailImage);
         Task<Cocktail> GetCocktail(Guid cocktailId);
         Task<List<Cocktail>> GetCocktails();
+        Task<Guid> DeleteCocktail(Guid cocktailId);
     }
     public class CocktailRepository : ICocktailRepository
     {
         private ICocktailContext _context;
-        public CocktailRepository(ICocktailContext context)
+        private IBlobService _blobService;
+        public CocktailRepository(ICocktailContext context, IBlobService blobService)
         {
             _context = context;
+            _blobService = blobService;
         }
 
         public async Task<Cocktail> AddCocktail(Cocktail cocktail) {
@@ -64,6 +69,21 @@ namespace Cocktails.API.Repositories
             .Include(c => c.Images)
             .ToListAsync();
         }
-    }
 
+        public async Task<Guid> DeleteCocktail(Guid cocktailId) {;
+            var cocktail = await _context.Cocktails.Where(c => c.CocktailId == cocktailId)
+            .Include(c => c.Images)
+            .SingleOrDefaultAsync();
+
+            _context.Cocktails.Remove(cocktail);
+
+            foreach(var image in cocktail.Images) {
+                await _context.SaveChangesAsync();
+                await _blobService.DeleteBlob("cocktail-images", image.Name);
+            }
+
+            return cocktailId;
+        }
+    }
+// 
 }
