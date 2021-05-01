@@ -12,6 +12,8 @@ namespace Cocktails.API.Repositories
     public interface ICategoryRepository {
         Task<List<Category>> GetCategories();
         Task<Category> GetCategory(int categoryId);
+
+        Task<Category> AddCategory(Category category);
     }
     public class CategoryRepository : ICategoryRepository
     {
@@ -26,8 +28,9 @@ namespace Cocktails.API.Repositories
             {
                 return await _context.Category.ToListAsync();
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
+                Console.Write(ex);
                 throw;
             }
         }
@@ -37,9 +40,23 @@ namespace Cocktails.API.Repositories
             {
                 return await _context.Category.Where(c => c.CategoryId == categoryId).SingleOrDefaultAsync(); 
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
-                
+                Console.Write(ex);
+                throw;
+            }
+        }
+
+        public async Task<Category> AddCategory(Category category) {
+            try
+            {
+                await _context.Category.AddAsync(category);
+                await _context.SaveChangesAsync();
+                return category;
+            }
+            catch (System.Exception ex)
+            {
+                Console.Write(ex);
                 throw;
             }
         }

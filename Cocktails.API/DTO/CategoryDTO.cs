@@ -13,4 +13,9 @@ namespace Cocktails.API.DTO
         // [JsonIgnore]
         // public List<CocktailCategory> CocktailCategories { get; set; }
     }
+
+    public class AddCategoryDTO
+    {
+        public string Name { get; set; }
+    }
 }

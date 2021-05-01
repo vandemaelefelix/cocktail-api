@@ -135,18 +135,18 @@ namespace Cocktails.API.Controllers
             }
         }
 
-        // [HttpPost]
-        // [Route("cocktails")]
-        // public async Task<ActionResult<CocktailDTO>> AddCategory(CocktailDTO cocktail)
-        // {
-        //     try{
-        //         return new OkObjectResult(await _cocktailService.AddCocktail(cocktail));
-        //     }
-        //     catch(Exception ex){
-        //         Console.Write(ex);
-        //         return new StatusCodeResult(500);
-        //     }
-        // }
+        [HttpPost]
+        [Route("categories")]
+        public async Task<ActionResult<AddCategoryDTO>> AddCategory(AddCategoryDTO category)
+        {
+            try{
+                return new OkObjectResult(await _cocktailService.AddCategory(category));
+            }
+            catch(Exception ex){
+                Console.Write(ex);
+                return new StatusCodeResult(500);
+            }
+        }
 
     }
 }

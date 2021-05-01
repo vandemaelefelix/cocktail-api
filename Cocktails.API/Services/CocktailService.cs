@@ -13,6 +13,7 @@ namespace Cocktails.API.Services
     {
         Task<List<CategoryDTO>> GetCategories();
         Task<CategoryDTO> GetCategory(int categoryId);
+        Task<AddCategoryDTO> AddCategory(AddCategoryDTO category);
         Task<List<IngredientDTO>> GetIngredients();
         Task<IngredientDTO> GetIngredient(Guid ingredientId);
 
@@ -126,6 +127,20 @@ namespace Cocktails.API.Services
                 }
 
                 return ingredient;
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<AddCategoryDTO> AddCategory(AddCategoryDTO category) {
+            try
+            {
+                Category newCategory = _mapper.Map<Category>(category);
+                await _categoryRepository.AddCategory(newCategory);
+
+                return category;
             }
             catch (System.Exception ex)
             {
