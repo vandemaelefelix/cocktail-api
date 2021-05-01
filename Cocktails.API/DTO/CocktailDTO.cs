@@ -12,7 +12,7 @@ namespace Cocktails.API.DTO
         public List<int> Categories { get; set; }
         public List<Guid> Ingredients { get; set; }
 
-        public string ImageEncoded { get; set; }
-        public string Extension { get; set; }
+        public List<string> ImageEncoded { get; set; }
+        public List<string> Extension { get; set; }
     }
 }

@@ -38,7 +38,6 @@ namespace Cocktails.API
             services.AddControllers();
             
 
-            // services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Cocktails.API", Version = "v1" });

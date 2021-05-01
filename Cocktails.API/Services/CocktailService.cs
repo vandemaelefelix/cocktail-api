@@ -19,6 +19,7 @@ namespace Cocktails.API.Services
         Task<Cocktail> GetCocktail(Guid cocktailId);
         Task<List<Cocktail>> GetCocktails();
         Task<CocktailDTO> AddCocktail(CocktailDTO cocktail);
+        Task<AddIngredientDTO> AddIngredient(AddIngredientDTO ingredient);
     }
     public class CocktailService : ICocktailService
     {
@@ -78,7 +79,6 @@ namespace Cocktails.API.Services
             try
             {
                 string containerName = "cocktail-images";
-                byte[] bytes = System.Convert.FromBase64String(cocktail.ImageEncoded);
 
                 Cocktail newCocktail = _mapper.Map<Cocktail>(cocktail);
                 
@@ -94,12 +94,38 @@ namespace Cocktails.API.Services
 
                 await _cocktailRepository.AddCocktail(newCocktail);
 
-                string fileName = $"{Guid.NewGuid()}.{cocktail.Extension}";
-                await _blobService.UploadByteArray(containerName, bytes, fileName);
-                // await _cocktailRepository.AddCocktailImage(new CocktailImage() { CocktailImageId = newCocktail.CocktailId, Name = fileName });
-                await _cocktailRepository.AddCocktailImage(new CocktailImage() { CocktailId = newCocktail.CocktailId, Name = fileName });
+                for (int i = 0; i < cocktail.ImageEncoded.Count; i++) {
+                    byte[] bytes = System.Convert.FromBase64String(cocktail.ImageEncoded[i]);
+                    string fileName = $"{Guid.NewGuid()}.{cocktail.Extension[i]}";
+                    await _blobService.UploadByteArray(containerName, bytes, fileName);
+                    await _cocktailRepository.AddCocktailImage(new CocktailImage() { CocktailId = newCocktail.CocktailId, Name = fileName });
+                }
 
                 return cocktail;
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<AddIngredientDTO> AddIngredient(AddIngredientDTO ingredient) {
+            try
+            {
+                string containerName = "ingredient-images";
+
+                Ingredient newIngredient = _mapper.Map<Ingredient>(ingredient);
+
+                await _ingredientRepository.AddIngredient(newIngredient);
+
+                for (int i = 0; i < ingredient.EncodedImages.Count; i++) {
+                    byte[] bytes = System.Convert.FromBase64String(ingredient.EncodedImages[i]);
+                    string fileName = $"{Guid.NewGuid()}.{ingredient.Extensions[i]}";
+                    await _blobService.UploadByteArray(containerName, bytes, fileName);
+                    await _ingredientRepository.AddIngredientImage(new IngredientImage() { IngredientId = newIngredient.IngredientId, Name = fileName });
+                }
+
+                return ingredient;
             }
             catch (System.Exception ex)
             {

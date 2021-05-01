@@ -33,8 +33,7 @@ namespace Cocktails.API.Services
 
 
                 CloudBlockBlob blockBlob = container.GetBlockBlobReference(fileName);
-                //blockBlob.FetchAttributes();
-                //byte[] file = new byte[blockBlob.Properties.Length];
+                
                 using (var memoryStream = new MemoryStream())
                 {
                     await blockBlob.UploadFromByteArrayAsync(data, 0, data.Length);

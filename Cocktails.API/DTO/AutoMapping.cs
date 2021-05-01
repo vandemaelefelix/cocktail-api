@@ -9,6 +9,7 @@ namespace Cocktails.API.DTO
         public AutoMapping() {
             CreateMap<Category, CategoryDTO>();           
             CreateMap<Ingredient, IngredientDTO>();           
+            CreateMap<AddIngredientDTO, Ingredient>();           
             CreateMap<CocktailDTO, Cocktail>();           
         }
     }

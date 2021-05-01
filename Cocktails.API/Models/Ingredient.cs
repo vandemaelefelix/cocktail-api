@@ -10,6 +10,7 @@ namespace Cocktails.API.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public int AlcoholPercentage { get; set; }
+        public List<IngredientImage> Images { get; set; }
 
         [JsonIgnore]
         public List<CocktailIngredient> CocktailIngredients { get; set; }

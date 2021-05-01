@@ -122,6 +122,19 @@ namespace Cocktails.API.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("ingredients")]
+        public async Task<ActionResult<AddIngredientDTO>> AddIngredient(AddIngredientDTO ingredient)
+        {
+            try{
+                return new OkObjectResult(await _cocktailService.AddIngredient(ingredient));
+            }
+            catch(Exception ex){
+                Console.Write(ex);
+                return new StatusCodeResult(500);
+            }
+        }
+
         // [HttpPost]
         // [Route("cocktails")]
         // public async Task<ActionResult<CocktailDTO>> AddCategory(CocktailDTO cocktail)

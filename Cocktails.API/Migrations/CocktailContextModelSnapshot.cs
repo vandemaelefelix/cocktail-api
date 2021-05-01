@@ -137,30 +137,26 @@ namespace Cocktails.API.Migrations
 
                     b.HasKey("IngredientId");
 
-                    b.ToTable("Ingredient");
+                    b.ToTable("Ingredients");
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            IngredientId = new Guid("476b80ee-8ac4-46ea-8044-71ffc4d2b2cf"),
-                            AlcoholPercentage = 41,
-                            Description = "Alcoholic substance drunk by pirates",
-                            Name = "Rum"
-                        },
-                        new
-                        {
-                            IngredientId = new Guid("45aae9bf-3870-4dd2-9cb2-ab099ce7818e"),
-                            AlcoholPercentage = 39,
-                            Description = "Alcoholic substance drunk by Russians",
-                            Name = "Vodka"
-                        },
-                        new
-                        {
-                            IngredientId = new Guid("718e4406-ac27-4a49-9b24-4e03578f1899"),
-                            AlcoholPercentage = 38,
-                            Description = "Alcoholic substance drunk by Alcoholics",
-                            Name = "Gin"
-                        });
+            modelBuilder.Entity("Cocktails.API.Models.IngredientImage", b =>
+                {
+                    b.Property<Guid>("IngredientImageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IngredientId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IngredientImageId");
+
+                    b.HasIndex("IngredientId");
+
+                    b.ToTable("IngredientImages");
                 });
 
             modelBuilder.Entity("Cocktails.API.Models.CocktailCategory", b =>
@@ -206,6 +202,15 @@ namespace Cocktails.API.Migrations
                     b.Navigation("Ingredient");
                 });
 
+            modelBuilder.Entity("Cocktails.API.Models.IngredientImage", b =>
+                {
+                    b.HasOne("Cocktails.API.Models.Ingredient", null)
+                        .WithMany("Images")
+                        .HasForeignKey("IngredientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Cocktails.API.Models.Category", b =>
                 {
                     b.Navigation("CocktailCategories");
@@ -223,6 +228,8 @@ namespace Cocktails.API.Migrations
             modelBuilder.Entity("Cocktails.API.Models.Ingredient", b =>
                 {
                     b.Navigation("CocktailIngredients");
+
+                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }

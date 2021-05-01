@@ -49,6 +49,7 @@ namespace Cocktails.API.Repositories
             .ThenInclude(c => c.Category)
             .Include(c => c.CocktailIngredients)
             .ThenInclude(c => c.Ingredient)
+            .ThenInclude(i => i.Images)
             .Include(c => c.Images)
             .SingleOrDefaultAsync();
         }
@@ -59,6 +60,7 @@ namespace Cocktails.API.Repositories
             .ThenInclude(c => c.Category)
             .Include(c => c.CocktailIngredients)
             .ThenInclude(c => c.Ingredient)
+            .ThenInclude(i => i.Images)
             .Include(c => c.Images)
             .ToListAsync();
         }

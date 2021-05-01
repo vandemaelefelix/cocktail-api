@@ -13,21 +13,22 @@ namespace Cocktails.API.DataContext
     public interface ICocktailContext
     {
         DbSet<Category> Category { get; set; }
-        DbSet<Ingredient> Ingredient { get; set; }
+        DbSet<Ingredient> Ingredients { get; set; }
         DbSet<Cocktail> Cocktails { get; set; }
         DbSet<CocktailImage> CocktailImages { get; set; }
+        DbSet<IngredientImage> IngredientImages { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
     public class CocktailContext : DbContext, ICocktailContext
     {
         public DbSet<Category> Category { get; set; }
-        public DbSet<Ingredient> Ingredient { get; set; }
+        public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<Cocktail> Cocktails { get; set; }
         public DbSet<CocktailCategory> CocktailCategories { get; set; }
         public DbSet<CocktailIngredient> CocktailIngredients { get; set; }
         public DbSet<CocktailImage> CocktailImages { get; set; }
-
+        public DbSet<IngredientImage> IngredientImages { get; set; }
         private ConnectionStrings _connectionStrings;
 
         public CocktailContext(DbContextOptions<CocktailContext> options, IOptions<ConnectionStrings> connectionStrings): base(options)
@@ -70,27 +71,27 @@ namespace Cocktails.API.DataContext
             // });
 
 
-            modelBuilder.Entity<Ingredient>().HasData(new Ingredient()
-            {
-                IngredientId = Guid.NewGuid(),
-                Name = "Rum",
-                Description = "Alcoholic substance drunk by pirates",
-                AlcoholPercentage = 41
-            });
-            modelBuilder.Entity<Ingredient>().HasData(new Ingredient()
-            {
-                IngredientId = Guid.NewGuid(),
-                Name = "Vodka",
-                Description = "Alcoholic substance drunk by Russians",
-                AlcoholPercentage = 39
-            });
-            modelBuilder.Entity<Ingredient>().HasData(new Ingredient()
-            {
-                IngredientId = Guid.NewGuid(),
-                Name = "Gin",
-                Description = "Alcoholic substance drunk by Alcoholics",
-                AlcoholPercentage = 38
-            });
+            // modelBuilder.Entity<Ingredient>().HasData(new Ingredient()
+            // {
+            //     IngredientId = Guid.NewGuid(),
+            //     Name = "Rum",
+            //     Description = "Alcoholic substance drunk by pirates",
+            //     AlcoholPercentage = 41
+            // });
+            // modelBuilder.Entity<Ingredient>().HasData(new Ingredient()
+            // {
+            //     IngredientId = Guid.NewGuid(),
+            //     Name = "Vodka",
+            //     Description = "Alcoholic substance drunk by Russians",
+            //     AlcoholPercentage = 39
+            // });
+            // modelBuilder.Entity<Ingredient>().HasData(new Ingredient()
+            // {
+            //     IngredientId = Guid.NewGuid(),
+            //     Name = "Gin",
+            //     Description = "Alcoholic substance drunk by Alcoholics",
+            //     AlcoholPercentage = 38
+            // });
         }
     }
 }
