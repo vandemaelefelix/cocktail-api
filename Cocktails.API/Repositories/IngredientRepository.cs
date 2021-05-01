@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Cocktails.API.DataContext;
+using Cocktails.API.DTO;
 using Cocktails.API.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,9 +13,9 @@ namespace Cocktails.API.Repositories
     public interface IIngredientRepository {
         Task<List<Ingredient>> GetIngredients();
         Task<Ingredient> GetIngredient(Guid ingredientId);
-
         Task<Ingredient> AddIngredient(Ingredient ingredient);
         Task AddIngredientImage(IngredientImage ingredientImage);
+        Task<Ingredient> UpdateIngredient(Guid ingredientId, UpdateIngredientDTO ingredient);
         
     }
     public class IngredientRepository : IIngredientRepository
@@ -45,10 +47,10 @@ namespace Cocktails.API.Repositories
                 .Include(i => i.Images)
                 .SingleOrDefaultAsync();
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
-                
-                throw;
+                Console.Write(ex);
+                throw ex;
             }
         }
 
@@ -64,6 +66,42 @@ namespace Cocktails.API.Repositories
                 await _context.Ingredients.AddAsync(ingredient);
                 await _context.SaveChangesAsync();
                 return ingredient;
+            }
+            catch (System.Exception ex)
+            {
+                Console.Write(ex);
+                throw;
+            }
+        }
+
+        public async Task<Ingredient> UpdateIngredient(Guid ingredientId, UpdateIngredientDTO ingredient) {
+            try
+            {
+                var oldIngredient = await _context.Ingredients.Where(c => c.IngredientId == ingredientId).SingleOrDefaultAsync();
+
+                if (oldIngredient != null) {
+                    PropertyInfo[] properties = ingredient.GetType().GetProperties();
+                    foreach (PropertyInfo property in properties)
+                    {
+                        var value = property.GetValue(ingredient, null);
+
+                        if (property.PropertyType == typeof(Nullable<int>)) {
+                            if (value != null) {
+                                oldIngredient.GetType().GetProperty(property.Name).SetValue(oldIngredient, value, null);
+                            } else {
+                                continue;
+                            }
+                        } else {
+                                oldIngredient.GetType().GetProperty(property.Name).SetValue(oldIngredient, value, null);
+                        }
+                    }
+                }
+
+                _context.Ingredients.Update(oldIngredient);
+
+                await _context.SaveChangesAsync();
+
+                return oldIngredient;
             }
             catch (System.Exception ex)
             {

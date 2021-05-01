@@ -18,4 +18,9 @@ namespace Cocktails.API.DTO
     {
         public string Name { get; set; }
     }
+
+    public class UpdateCategoryDTO
+    {
+        public string Name { get; set; }
+    }
 }

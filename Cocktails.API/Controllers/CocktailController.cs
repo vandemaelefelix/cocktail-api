@@ -162,5 +162,50 @@ namespace Cocktails.API.Controllers
                 throw ex;
             }
         }
+
+        [HttpPut]
+        [Route("cocktails/{cocktailId}")]
+        public async Task<ActionResult<Cocktail>> UpdateCocktail(Guid cocktailId, CocktailUpdateDTO cocktail) 
+        {
+            try
+            {
+                return new OkObjectResult(await _cocktailService.UpdateCocktail(cocktailId, cocktail));
+            }
+            catch (System.Exception ex)
+            {
+                Console.Write(ex);
+                throw ex;
+            }
+        }
+
+        [HttpPut]
+        [Route("categories/{categoryId}")]
+        public async Task<ActionResult<Category>> UpdateCategory(int categoryId, UpdateCategoryDTO category) 
+        {
+            try
+            {
+                return new OkObjectResult(await _cocktailService.UpdateCategory(categoryId, category));
+            }
+            catch (System.Exception ex)
+            {
+                Console.Write(ex);
+                throw ex;
+            }
+        }
+
+        [HttpPut]
+        [Route("ingredients/{ingredientId}")]
+        public async Task<ActionResult<Ingredient>> UpdateIngredient(Guid ingredientId, UpdateIngredientDTO ingredient) 
+        {
+            try
+            {
+                return new OkObjectResult(await _cocktailService.UpdateIngredient(ingredientId, ingredient));
+            }
+            catch (System.Exception ex)
+            {
+                Console.Write(ex);
+                throw ex;
+            }
+        }
     }
 }

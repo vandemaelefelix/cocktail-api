@@ -14,14 +14,18 @@ namespace Cocktails.API.Services
         Task<List<CategoryDTO>> GetCategories();
         Task<CategoryDTO> GetCategory(int categoryId);
         Task<AddCategoryDTO> AddCategory(AddCategoryDTO category);
+        Task<Category> UpdateCategory(int categoryId, UpdateCategoryDTO category);
+
         Task<List<IngredientDTO>> GetIngredients();
         Task<IngredientDTO> GetIngredient(Guid ingredientId);
+        Task<AddIngredientDTO> AddIngredient(AddIngredientDTO ingredient);
+        Task<Ingredient> UpdateIngredient(Guid ingredientId, UpdateIngredientDTO ingredient);
 
         Task<Cocktail> GetCocktail(Guid cocktailId);
         Task<List<Cocktail>> GetCocktails();
         Task<CocktailDTO> AddCocktail(CocktailDTO cocktail);
         Task<Guid> DeleteCocktail(Guid cocktailId);
-        Task<AddIngredientDTO> AddIngredient(AddIngredientDTO ingredient);
+        Task<Cocktail> UpdateCocktail(Guid cocktailId, CocktailUpdateDTO cocktail);
     }
     public class CocktailService : ICocktailService
     {
@@ -42,17 +46,19 @@ namespace Cocktails.API.Services
         public async Task<List<CategoryDTO>> GetCategories() {
             return _mapper.Map<List<CategoryDTO>>(await _categoryRepository.GetCategories());
         }
-
+        
         public async Task<CategoryDTO> GetCategory(int categoryId) {
             return _mapper.Map<CategoryDTO>(await _categoryRepository.GetCategory(categoryId));
         }
+        
         public async Task<List<IngredientDTO>> GetIngredients() {
             return _mapper.Map<List<IngredientDTO>>(await _ingredientRepository.GetIngredients());
         }
+        
         public async Task<IngredientDTO> GetIngredient(Guid ingredientId) {
             return _mapper.Map<IngredientDTO>(await _ingredientRepository.GetIngredient(ingredientId));
         }
-
+        
         public async Task<Cocktail> GetCocktail(Guid cocktailId) {
             try
             {
@@ -64,7 +70,7 @@ namespace Cocktails.API.Services
                 throw ex;
             }
         }
-
+        
         public async Task<List<Cocktail>> GetCocktails() {
             try
             {
@@ -151,6 +157,42 @@ namespace Cocktails.API.Services
             }
             catch (System.Exception ex)
             {
+                throw ex;
+            }
+        }
+
+        public async Task<Cocktail> UpdateCocktail(Guid cocktailId, CocktailUpdateDTO cocktail) {
+            try
+            {
+                return await _cocktailRepository.UpdateCocktail(cocktailId, cocktail);
+            }
+            catch (System.Exception ex)
+            {
+                Console.Write(ex);
+                throw ex;
+            }
+        }
+
+        public async Task<Category> UpdateCategory(int categoryId, UpdateCategoryDTO category) {
+            try
+            {
+                return await _categoryRepository.UpdateCategory(categoryId, category);
+            }
+            catch (System.Exception ex)
+            {
+                Console.Write(ex);
+                throw ex;
+            }
+        }
+
+        public async Task<Ingredient> UpdateIngredient(Guid ingredientId, UpdateIngredientDTO ingredient) {
+            try
+            {
+                return await _ingredientRepository.UpdateIngredient(ingredientId, ingredient);
+            }
+            catch (System.Exception ex)
+            {
+                Console.Write(ex);
                 throw ex;
             }
         }

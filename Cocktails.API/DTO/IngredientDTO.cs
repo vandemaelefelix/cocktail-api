@@ -22,4 +22,11 @@ namespace Cocktails.API.DTO
         public List<string> EncodedImages { get; set; }
         public List<string> Extensions { get; set; }
     }
+
+    public class UpdateIngredientDTO
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public Nullable<int> AlcoholPercentage { get; set; } = null;
+    }
 }

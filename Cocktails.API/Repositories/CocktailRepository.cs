@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Net.Mime;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,8 @@ using Cocktails.API.DataContext;
 using Cocktails.API.Models;
 using Cocktails.API.Services;
 using Microsoft.EntityFrameworkCore;
+using Cocktails.API.DTO;
+using AutoMapper;
 
 namespace Cocktails.API.Repositories
 {
@@ -17,15 +20,18 @@ namespace Cocktails.API.Repositories
         Task<Cocktail> GetCocktail(Guid cocktailId);
         Task<List<Cocktail>> GetCocktails();
         Task<Guid> DeleteCocktail(Guid cocktailId);
+        Task<Cocktail> UpdateCocktail(Guid cocktailId, CocktailUpdateDTO cocktail);
     }
     public class CocktailRepository : ICocktailRepository
     {
         private ICocktailContext _context;
         private IBlobService _blobService;
-        public CocktailRepository(ICocktailContext context, IBlobService blobService)
+        private IMapper _mapper;
+        public CocktailRepository(ICocktailContext context, IBlobService blobService, IMapper mapper)
         {
             _context = context;
             _blobService = blobService;
+            _mapper = mapper;
         }
 
         public async Task<Cocktail> AddCocktail(Cocktail cocktail) {
@@ -70,7 +76,7 @@ namespace Cocktails.API.Repositories
             .ToListAsync();
         }
 
-        public async Task<Guid> DeleteCocktail(Guid cocktailId) {;
+        public async Task<Guid> DeleteCocktail(Guid cocktailId) {
             var cocktail = await _context.Cocktails.Where(c => c.CocktailId == cocktailId)
             .Include(c => c.Images)
             .SingleOrDefaultAsync();
@@ -84,6 +90,30 @@ namespace Cocktails.API.Repositories
 
             return cocktailId;
         }
+
+        public async Task<Cocktail> UpdateCocktail(Guid cocktailId, CocktailUpdateDTO cocktail) {
+            var oldCocktail = await _context.Cocktails.Where(c => c.CocktailId == cocktailId)
+            .Include(c => c.CocktailCategories)
+            .Include(c => c.CocktailIngredients)
+            .Include(c => c.Images)
+            .SingleOrDefaultAsync();
+
+            if (oldCocktail != null) {
+                PropertyInfo[] properties = cocktail.GetType().GetProperties();
+                foreach (PropertyInfo property in properties)
+                {
+                    if (property.GetValue(cocktail, null) != null) {
+                        var value = property.GetValue(cocktail, null);
+                        oldCocktail.GetType().GetProperty(property.Name).SetValue(oldCocktail, value, null);
+                    }
+                }
+            }
+
+            _context.Cocktails.Update(oldCocktail);
+
+            await _context.SaveChangesAsync();
+
+            return oldCocktail;
+        }
     }
-// 
 }

@@ -15,4 +15,11 @@ namespace Cocktails.API.DTO
         public List<string> ImageEncoded { get; set; }
         public List<string> Extension { get; set; }
     }
+
+    public class CocktailUpdateDTO
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public bool Alcoholic { get; set; }
+    }
 }
