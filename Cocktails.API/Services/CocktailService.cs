@@ -20,12 +20,14 @@ namespace Cocktails.API.Services
         Task<IngredientDTO> GetIngredient(Guid ingredientId);
         Task<AddIngredientDTO> AddIngredient(AddIngredientDTO ingredient);
         Task<Ingredient> UpdateIngredient(Guid ingredientId, UpdateIngredientDTO ingredient);
+        Task<Guid> AddIngredientImages(Guid ingredientId, ImageDTO images);
 
         Task<Cocktail> GetCocktail(Guid cocktailId);
         Task<List<Cocktail>> GetCocktails();
         Task<CocktailDTO> AddCocktail(CocktailDTO cocktail);
         Task<Guid> DeleteCocktail(Guid cocktailId);
         Task<Cocktail> UpdateCocktail(Guid cocktailId, CocktailUpdateDTO cocktail);
+        Task<Guid> AddCocktailImages(Guid cocktailId, ImageDTO images);
     }
     public class CocktailService : ICocktailService
     {
@@ -196,5 +198,47 @@ namespace Cocktails.API.Services
                 throw ex;
             }
         }
+
+        public async Task<Guid> AddCocktailImages(Guid cocktailId, ImageDTO images) {
+            try
+            {
+                string containerName = "cocktail-images";
+                
+                for (int i = 0; i < images.EncodedImages.Count; i++) {
+                    byte[] bytes = System.Convert.FromBase64String(images.EncodedImages[i]);
+                    string fileName = $"{Guid.NewGuid()}.{images.Extensions[i]}";
+                    await _blobService.UploadByteArray(containerName, bytes, fileName);
+                    await _cocktailRepository.AddCocktailImage(new CocktailImage() { CocktailId = cocktailId, Name = fileName });
+                }
+
+                return cocktailId;
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<Guid> AddIngredientImages(Guid ingredientId, ImageDTO images) {
+            try
+            {
+                string containerName = "ingredient-images";
+                
+                for (int i = 0; i < images.EncodedImages.Count; i++) {
+                    byte[] bytes = System.Convert.FromBase64String(images.EncodedImages[i]);
+                    string fileName = $"{Guid.NewGuid()}.{images.Extensions[i]}";
+                    await _blobService.UploadByteArray(containerName, bytes, fileName);
+                    await _ingredientRepository.AddIngredientImage(new IngredientImage() { IngredientId = ingredientId, Name = fileName });
+                }
+
+                return ingredientId;
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
     }
 }

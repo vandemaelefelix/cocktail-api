@@ -207,5 +207,35 @@ namespace Cocktails.API.Controllers
                 throw ex;
             }
         }
+
+        [HttpPost]
+        [Route("cocktails/{cocktailId}")]
+        public async Task<ActionResult<Guid>> AddCocktailImages(Guid cocktailId, ImageDTO images) 
+        {
+            try
+            {
+                return new OkObjectResult(await _cocktailService.AddCocktailImages(cocktailId, images));
+            }
+            catch (System.Exception ex)
+            {
+                Console.Write(ex);
+                throw ex;
+            }
+        }
+
+        [HttpPost]
+        [Route("ingredients/{ingredientId}")]
+        public async Task<ActionResult<Guid>> AddIngredientImages(Guid ingredientId, ImageDTO images) 
+        {
+            try
+            {
+                return new OkObjectResult(await _cocktailService.AddIngredientImages(ingredientId, images));
+            }
+            catch (System.Exception ex)
+            {
+                Console.Write(ex);
+                throw ex;
+            }
+        }
     }
 }
