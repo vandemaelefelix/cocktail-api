@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HIPVKVas/EJ55fZ8RuoPzDs+yMXcqJfvjepJTwmIhxmtcw2OadO53Kuj9hO9IRhMI57zHfxbAT6Xi/L6rQx3Tg==",
+  "dgSpecHash": "X84dumgUcwfJz7aegHCCY72OzeE93jNSUKJrhwq+4N53H7CYBiQ9v81MaFmc6AdDx/rSgsFbgXqoZCW6+Ajp5g==",
   "success": true,
-  "projectFilePath": "C:\\src\\cocktail-api\\Cocktails.API\\Cocktails.API.csproj",
+  "projectFilePath": "c:\\src\\cocktail-api\\Cocktails.API\\Cocktails.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vande\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\vande\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\src\\cocktail-api\\Cocktails.API\\Cocktails.API.csproj": {}
+    "c:\\src\\cocktail-api\\Cocktails.API\\Cocktails.API.csproj": {}
   },
   "projects": {
-    "C:\\src\\cocktail-api\\Cocktails.API\\Cocktails.API.csproj": {
+    "c:\\src\\cocktail-api\\Cocktails.API\\Cocktails.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\src\\cocktail-api\\Cocktails.API\\Cocktails.API.csproj",
+        "projectUniqueName": "c:\\src\\cocktail-api\\Cocktails.API\\Cocktails.API.csproj",
         "projectName": "Cocktails.API",
-        "projectPath": "C:\\src\\cocktail-api\\Cocktails.API\\Cocktails.API.csproj",
+        "projectPath": "c:\\src\\cocktail-api\\Cocktails.API\\Cocktails.API.csproj",
         "packagesPath": "C:\\Users\\vande\\.nuget\\packages\\",
-        "outputPath": "C:\\src\\cocktail-api\\Cocktails.API\\obj\\",
+        "outputPath": "c:\\src\\cocktail-api\\Cocktails.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vande\\AppData\\Roaming\\NuGet\\NuGet.Config"

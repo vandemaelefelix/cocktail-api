@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Logging;
 using Cocktails.API.Services;
 using Cocktails.API.Models;
@@ -9,6 +10,7 @@ using Cocktails.API.DTO;
 
 namespace Cocktails.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api")]
     public class CocktailController : ControllerBase
@@ -25,8 +27,6 @@ namespace Cocktails.API.Controllers
         [HttpGet]
         [Route("categories")]
         public async Task<ActionResult<List<Category>>> GetCategories() {
-            // return "Yes it works";
-
             try
             {
                 return new OkObjectResult(await _cocktailService.GetCategories());
@@ -150,7 +150,7 @@ namespace Cocktails.API.Controllers
 
         [HttpDelete]
         [Route("cocktails/{cocktailId}")]
-        public async Task<ActionResult<Cocktail>> DeleteCocktail(Guid cocktailId)
+        public async Task<ActionResult<Guid>> DeleteCocktail(Guid cocktailId)
         {
             try
             {

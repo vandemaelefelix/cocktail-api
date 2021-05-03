@@ -1,0 +1,2497 @@
+{
+  "Cocktails.API.dll": {
+    "C:\\src\\cocktail-api\\Cocktails.API\\Program.cs": {
+      "Cocktails.API.Program": {
+        "System.Void Cocktails.API.Program::Main(System.String[])": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.Extensions.Hosting.IHostBuilder Cocktails.API.Program::CreateHostBuilder(System.String[])": {
+          "Lines": {
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Startup.cs": {
+      "Cocktails.API.Startup": {
+        "Microsoft.Extensions.Configuration.IConfiguration Cocktails.API.Startup::get_Configuration()": {
+          "Lines": {
+            "28": 1
+          },
+          "Branches": []
+        },
+        "System.Void Cocktails.API.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "32": 1,
+            "33": 1,
+            "35": 1,
+            "36": 1,
+            "38": 1,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 2,
+            "46": 1,
+            "47": 1,
+            "48": 1,
+            "49": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1
+          },
+          "Branches": []
+        },
+        "System.Void Cocktails.API.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)": {
+          "Lines": {
+            "57": 1,
+            "58": 2,
+            "59": 1,
+            "60": 1,
+            "61": 2,
+            "62": 1,
+            "64": 1,
+            "66": 1,
+            "68": 1,
+            "70": 1,
+            "71": 1,
+            "72": 1,
+            "73": 2,
+            "74": 1
+          },
+          "Branches": [
+            {
+              "Line": 58,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 58,
+              "Offset": 7,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 58,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 58,
+              "Offset": 25,
+              "EndOffset": 82,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void Cocktails.API.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\WeatherForecast.cs": {
+      "Cocktails.API.WeatherForecast": {
+        "System.DateTime Cocktails.API.WeatherForecast::get_Date()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Cocktails.API.WeatherForecast::get_TemperatureC()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Cocktails.API.WeatherForecast::get_TemperatureF()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.WeatherForecast::get_Summary()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Services\\BlobService.cs": {
+      "Cocktails.API.Services.BlobService": {
+        "System.Void Cocktails.API.Services.BlobService::.ctor(Microsoft.Extensions.Options.IOptions`1<Cocktails.API.Config.ConnectionStrings>)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.BlobService/<UploadByteArray>d__2": {
+        "System.Void Cocktails.API.Services.BlobService/<UploadByteArray>d__2::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "36": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "48": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.BlobService/<DeleteBlob>d__3": {
+        "System.Void Cocktails.API.Services.BlobService/<DeleteBlob>d__3::MoveNext()": {
+          "Lines": {
+            "51": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "66": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Services\\CocktailService.cs": {
+      "Cocktails.API.Services.CocktailService": {
+        "System.Void Cocktails.API.Services.CocktailService::.ctor(AutoMapper.IMapper,Cocktails.API.Repositories.ICategoryRepository,Cocktails.API.Repositories.IIngredientRepository,Cocktails.API.Repositories.ICocktailRepository,Cocktails.API.Services.IBlobService)": {
+          "Lines": {
+            "40": 8,
+            "41": 4,
+            "42": 4,
+            "43": 4,
+            "44": 4,
+            "45": 4,
+            "46": 4
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<GetCategories>d__6": {
+        "System.Void Cocktails.API.Services.CocktailService/<GetCategories>d__6::MoveNext()": {
+          "Lines": {
+            "48": 1,
+            "49": 1,
+            "50": 1
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<GetCategory>d__7": {
+        "System.Void Cocktails.API.Services.CocktailService/<GetCategory>d__7::MoveNext()": {
+          "Lines": {
+            "52": 0,
+            "53": 0,
+            "54": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<GetIngredients>d__8": {
+        "System.Void Cocktails.API.Services.CocktailService/<GetIngredients>d__8::MoveNext()": {
+          "Lines": {
+            "56": 1,
+            "57": 1,
+            "58": 1
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<GetIngredient>d__9": {
+        "System.Void Cocktails.API.Services.CocktailService/<GetIngredient>d__9::MoveNext()": {
+          "Lines": {
+            "60": 0,
+            "61": 0,
+            "62": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<GetCocktail>d__10": {
+        "System.Void Cocktails.API.Services.CocktailService/<GetCocktail>d__10::MoveNext()": {
+          "Lines": {
+            "64": 0,
+            "66": 0,
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "74": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<GetCocktails>d__11": {
+        "System.Void Cocktails.API.Services.CocktailService/<GetCocktails>d__11::MoveNext()": {
+          "Lines": {
+            "76": 1,
+            "78": 1,
+            "79": 1,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "86": 1
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<DeleteCocktail>d__12": {
+        "System.Void Cocktails.API.Services.CocktailService/<DeleteCocktail>d__12::MoveNext()": {
+          "Lines": {
+            "88": 0,
+            "89": 0,
+            "91": 0,
+            "92": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<AddCocktail>d__13": {
+        "System.Void Cocktails.API.Services.CocktailService/<AddCocktail>d__13::MoveNext()": {
+          "Lines": {
+            "94": 1,
+            "96": 1,
+            "97": 1,
+            "99": 1,
+            "101": 1,
+            "102": 3,
+            "103": 0,
+            "104": 0,
+            "106": 1,
+            "107": 3,
+            "108": 0,
+            "109": 0,
+            "111": 1,
+            "113": 2,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "120": 1,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "126": 1
+          },
+          "Branches": [
+            {
+              "Line": 102,
+              "Offset": 199,
+              "EndOffset": 134,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 102,
+              "Offset": 199,
+              "EndOffset": 201,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 107,
+              "Offset": 357,
+              "EndOffset": 280,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 107,
+              "Offset": 357,
+              "EndOffset": 359,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 113,
+              "Offset": 935,
+              "EndOffset": 520,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 113,
+              "Offset": 935,
+              "EndOffset": 940,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<AddIngredient>d__14": {
+        "System.Void Cocktails.API.Services.CocktailService/<AddIngredient>d__14::MoveNext()": {
+          "Lines": {
+            "128": 0,
+            "130": 0,
+            "131": 0,
+            "133": 0,
+            "135": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "144": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "150": 0
+          },
+          "Branches": [
+            {
+              "Line": 137,
+              "Offset": 628,
+              "EndOffset": 213,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 137,
+              "Offset": 628,
+              "EndOffset": 633,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<AddCategory>d__15": {
+        "System.Void Cocktails.API.Services.CocktailService/<AddCategory>d__15::MoveNext()": {
+          "Lines": {
+            "152": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "158": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "164": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<UpdateCocktail>d__16": {
+        "System.Void Cocktails.API.Services.CocktailService/<UpdateCocktail>d__16::MoveNext()": {
+          "Lines": {
+            "166": 0,
+            "168": 0,
+            "169": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "176": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<UpdateCategory>d__17": {
+        "System.Void Cocktails.API.Services.CocktailService/<UpdateCategory>d__17::MoveNext()": {
+          "Lines": {
+            "178": 0,
+            "180": 0,
+            "181": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "188": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<UpdateIngredient>d__18": {
+        "System.Void Cocktails.API.Services.CocktailService/<UpdateIngredient>d__18::MoveNext()": {
+          "Lines": {
+            "190": 0,
+            "192": 0,
+            "193": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "200": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<AddCocktailImages>d__19": {
+        "System.Void Cocktails.API.Services.CocktailService/<AddCocktailImages>d__19::MoveNext()": {
+          "Lines": {
+            "202": 0,
+            "204": 0,
+            "205": 0,
+            "207": 0,
+            "208": 0,
+            "209": 0,
+            "210": 0,
+            "211": 0,
+            "212": 0,
+            "214": 0,
+            "216": 0,
+            "217": 0,
+            "218": 0,
+            "220": 0
+          },
+          "Branches": [
+            {
+              "Line": 207,
+              "Offset": 469,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 207,
+              "Offset": 469,
+              "EndOffset": 474,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Cocktails.API.Services.CocktailService/<AddIngredientImages>d__20": {
+        "System.Void Cocktails.API.Services.CocktailService/<AddIngredientImages>d__20::MoveNext()": {
+          "Lines": {
+            "222": 0,
+            "224": 0,
+            "225": 0,
+            "227": 0,
+            "228": 0,
+            "229": 0,
+            "230": 0,
+            "231": 0,
+            "232": 0,
+            "234": 0,
+            "236": 0,
+            "237": 0,
+            "238": 0,
+            "240": 0
+          },
+          "Branches": [
+            {
+              "Line": 227,
+              "Offset": 469,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 227,
+              "Offset": 469,
+              "EndOffset": 474,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Repositories\\CategoryRepository.cs": {
+      "Cocktails.API.Repositories.CategoryRepository": {
+        "System.Void Cocktails.API.Repositories.CategoryRepository::.ctor(Cocktails.API.DataContext.ICocktailContext)": {
+          "Lines": {
+            "25": 8,
+            "26": 4,
+            "27": 4
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.CategoryRepository/<GetCategories>d__2": {
+        "System.Void Cocktails.API.Repositories.CategoryRepository/<GetCategories>d__2::MoveNext()": {
+          "Lines": {
+            "29": 1,
+            "31": 1,
+            "32": 1,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 1
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.CategoryRepository/<GetCategory>d__3": {
+        "System.Void Cocktails.API.Repositories.CategoryRepository/<GetCategory>d__3::MoveNext()": {
+          "Lines": {
+            "41": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.CategoryRepository/<AddCategory>d__4": {
+        "System.Void Cocktails.API.Repositories.CategoryRepository/<AddCategory>d__4::MoveNext()": {
+          "Lines": {
+            "53": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "65": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.CategoryRepository/<UpdateCategory>d__5": {
+        "System.Void Cocktails.API.Repositories.CategoryRepository/<UpdateCategory>d__5::MoveNext()": {
+          "Lines": {
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "83": 0,
+            "85": 0,
+            "87": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "94": 0
+          },
+          "Branches": [
+            {
+              "Line": 72,
+              "Offset": 329,
+              "EndOffset": 334,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 74,
+              "Offset": 544,
+              "EndOffset": 382,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 76,
+              "Offset": 427,
+              "EndOffset": 429,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 76,
+              "Offset": 427,
+              "EndOffset": 508,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 74,
+              "Offset": 544,
+              "EndOffset": 549,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 329,
+              "EndOffset": 564,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Repositories\\CocktailRepository.cs": {
+      "Cocktails.API.Repositories.CocktailRepository": {
+        "System.Void Cocktails.API.Repositories.CocktailRepository::.ctor(Cocktails.API.DataContext.ICocktailContext,Cocktails.API.Services.IBlobService,AutoMapper.IMapper)": {
+          "Lines": {
+            "30": 4,
+            "31": 4,
+            "32": 4,
+            "33": 4,
+            "34": 4,
+            "35": 4
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.CocktailRepository/<AddCocktail>d__4": {
+        "System.Void Cocktails.API.Repositories.CocktailRepository/<AddCocktail>d__4::MoveNext()": {
+          "Lines": {
+            "37": 1,
+            "39": 1,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "49": 1
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.CocktailRepository/<AddCocktailImage>d__5": {
+        "System.Void Cocktails.API.Repositories.CocktailRepository/<AddCocktailImage>d__5::MoveNext()": {
+          "Lines": {
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.CocktailRepository/<GetCocktail>d__6": {
+        "System.Void Cocktails.API.Repositories.CocktailRepository/<GetCocktail>d__6::MoveNext()": {
+          "Lines": {
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.CocktailRepository/<GetCocktails>d__7": {
+        "System.Void Cocktails.API.Repositories.CocktailRepository/<GetCocktails>d__7::MoveNext()": {
+          "Lines": {
+            "68": 1,
+            "69": 1,
+            "70": 1,
+            "71": 1,
+            "72": 1,
+            "73": 1,
+            "74": 1,
+            "75": 1,
+            "76": 1,
+            "77": 1
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.CocktailRepository/<DeleteCocktail>d__8": {
+        "System.Void Cocktails.API.Repositories.CocktailRepository/<DeleteCocktail>d__8::MoveNext()": {
+          "Lines": {
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "84": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "91": 0,
+            "92": 0
+          },
+          "Branches": [
+            {
+              "Line": 79,
+              "Offset": 16,
+              "EndOffset": 30,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 79,
+              "Offset": 16,
+              "EndOffset": 437,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 86,
+              "Offset": 745,
+              "EndOffset": 462,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 86,
+              "Offset": 745,
+              "EndOffset": 750,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Cocktails.API.Repositories.CocktailRepository/<UpdateCocktail>d__9": {
+        "System.Void Cocktails.API.Repositories.CocktailRepository/<UpdateCocktail>d__9::MoveNext()": {
+          "Lines": {
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "112": 0,
+            "114": 0,
+            "116": 0,
+            "117": 0
+          },
+          "Branches": [
+            {
+              "Line": 101,
+              "Offset": 521,
+              "EndOffset": 526,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 103,
+              "Offset": 736,
+              "EndOffset": 574,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 105,
+              "Offset": 619,
+              "EndOffset": 621,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 105,
+              "Offset": 619,
+              "EndOffset": 700,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 103,
+              "Offset": 736,
+              "EndOffset": 741,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 101,
+              "Offset": 521,
+              "EndOffset": 756,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Repositories\\IngredientRepository.cs": {
+      "Cocktails.API.Repositories.IngredientRepository": {
+        "System.Void Cocktails.API.Repositories.IngredientRepository::.ctor(Cocktails.API.DataContext.ICocktailContext)": {
+          "Lines": {
+            "25": 8,
+            "26": 4,
+            "27": 4
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.IngredientRepository/<GetIngredients>d__2": {
+        "System.Void Cocktails.API.Repositories.IngredientRepository/<GetIngredients>d__2::MoveNext()": {
+          "Lines": {
+            "29": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 1
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.IngredientRepository/<GetIngredient>d__3": {
+        "System.Void Cocktails.API.Repositories.IngredientRepository/<GetIngredient>d__3::MoveNext()": {
+          "Lines": {
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "55": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.IngredientRepository/<AddIngredientImage>d__4": {
+        "System.Void Cocktails.API.Repositories.IngredientRepository/<AddIngredientImage>d__4::MoveNext()": {
+          "Lines": {
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.IngredientRepository/<AddIngredient>d__5": {
+        "System.Void Cocktails.API.Repositories.IngredientRepository/<AddIngredient>d__5::MoveNext()": {
+          "Lines": {
+            "63": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "75": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Repositories.IngredientRepository/<UpdateIngredient>d__6": {
+        "System.Void Cocktails.API.Repositories.IngredientRepository/<UpdateIngredient>d__6::MoveNext()": {
+          "Lines": {
+            "77": 0,
+            "79": 0,
+            "80": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "100": 0,
+            "102": 0,
+            "104": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "111": 0
+          },
+          "Branches": [
+            {
+              "Line": 82,
+              "Offset": 345,
+              "EndOffset": 350,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 84,
+              "Offset": 637,
+              "EndOffset": 398,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 88,
+              "Offset": 472,
+              "EndOffset": 474,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 89,
+              "Offset": 488,
+              "EndOffset": 490,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 89,
+              "Offset": 488,
+              "EndOffset": 540,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 88,
+              "Offset": 472,
+              "EndOffset": 546,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 84,
+              "Offset": 637,
+              "EndOffset": 642,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 82,
+              "Offset": 345,
+              "EndOffset": 657,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Models\\Category.cs": {
+      "Cocktails.API.Models.Category": {
+        "System.Int32 Cocktails.API.Models.Category::get_CategoryId()": {
+          "Lines": {
+            "11": 22
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.Models.Category::get_Name()": {
+          "Lines": {
+            "12": 22
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Cocktails.API.Models.CocktailCategory> Cocktails.API.Models.Category::get_CocktailCategories()": {
+          "Lines": {
+            "15": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Models\\Cocktail.cs": {
+      "Cocktails.API.Models.Cocktail": {
+        "System.Guid Cocktails.API.Models.Cocktail::get_CocktailId()": {
+          "Lines": {
+            "10": 42
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.Models.Cocktail::get_Name()": {
+          "Lines": {
+            "11": 43
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.Models.Cocktail::get_Description()": {
+          "Lines": {
+            "12": 43
+          },
+          "Branches": []
+        },
+        "System.Boolean Cocktails.API.Models.Cocktail::get_Alcoholic()": {
+          "Lines": {
+            "13": 43
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Cocktails.API.Models.CocktailCategory> Cocktails.API.Models.Cocktail::get_CocktailCategories()": {
+          "Lines": {
+            "14": 64
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Cocktails.API.Models.CocktailIngredient> Cocktails.API.Models.Cocktail::get_CocktailIngredients()": {
+          "Lines": {
+            "15": 64
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Cocktails.API.Models.CocktailImage> Cocktails.API.Models.Cocktail::get_Images()": {
+          "Lines": {
+            "16": 63
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Models\\CocktailCategory.cs": {
+      "Cocktails.API.Models.CocktailCategory": {
+        "System.Guid Cocktails.API.Models.CocktailCategory::get_CocktailId()": {
+          "Lines": {
+            "9": 12
+          },
+          "Branches": []
+        },
+        "System.Int32 Cocktails.API.Models.CocktailCategory::get_CategoryId()": {
+          "Lines": {
+            "10": 12
+          },
+          "Branches": []
+        },
+        "Cocktails.API.Models.Category Cocktails.API.Models.CocktailCategory::get_Category()": {
+          "Lines": {
+            "11": 18
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Models\\CocktailImage.cs": {
+      "Cocktails.API.Models.CocktailImage": {
+        "System.Guid Cocktails.API.Models.CocktailImage::get_CocktailImageId()": {
+          "Lines": {
+            "8": 14
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.Models.CocktailImage::get_Name()": {
+          "Lines": {
+            "9": 14
+          },
+          "Branches": []
+        },
+        "System.Guid Cocktails.API.Models.CocktailImage::get_CocktailId()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Models\\CocktailIngredient.cs": {
+      "Cocktails.API.Models.CocktailIngredient": {
+        "System.Guid Cocktails.API.Models.CocktailIngredient::get_CocktailId()": {
+          "Lines": {
+            "8": 6
+          },
+          "Branches": []
+        },
+        "System.Guid Cocktails.API.Models.CocktailIngredient::get_IngredientId()": {
+          "Lines": {
+            "9": 6
+          },
+          "Branches": []
+        },
+        "Cocktails.API.Models.Ingredient Cocktails.API.Models.CocktailIngredient::get_Ingredient()": {
+          "Lines": {
+            "10": 9
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Models\\Ingredient.cs": {
+      "Cocktails.API.Models.Ingredient": {
+        "System.Guid Cocktails.API.Models.Ingredient::get_IngredientId()": {
+          "Lines": {
+            "9": 15
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.Models.Ingredient::get_Name()": {
+          "Lines": {
+            "10": 15
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.Models.Ingredient::get_Description()": {
+          "Lines": {
+            "11": 15
+          },
+          "Branches": []
+        },
+        "System.Int32 Cocktails.API.Models.Ingredient::get_AlcoholPercentage()": {
+          "Lines": {
+            "12": 15
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Cocktails.API.Models.IngredientImage> Cocktails.API.Models.Ingredient::get_Images()": {
+          "Lines": {
+            "13": 15
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Cocktails.API.Models.CocktailIngredient> Cocktails.API.Models.Ingredient::get_CocktailIngredients()": {
+          "Lines": {
+            "16": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Models\\IngredientImage.cs": {
+      "Cocktails.API.Models.IngredientImage": {
+        "System.Guid Cocktails.API.Models.IngredientImage::get_IngredientImageId()": {
+          "Lines": {
+            "8": 14
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.Models.IngredientImage::get_Name()": {
+          "Lines": {
+            "9": 14
+          },
+          "Branches": []
+        },
+        "System.Guid Cocktails.API.Models.IngredientImage::get_IngredientId()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Migrations\\20210501104201_Migration 1.0.cs": {
+      "Cocktails.API.Migrations.Migration10": {
+        "System.Void Cocktails.API.Migrations.Migration10::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0
+          },
+          "Branches": []
+        },
+        "System.Void Cocktails.API.Migrations.Migration10::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "178": 0,
+            "179": 0,
+            "181": 0,
+            "182": 0,
+            "184": 0,
+            "185": 0,
+            "187": 0,
+            "188": 0,
+            "190": 0,
+            "191": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Migrations\\20210501104201_Migration 1.0.Designer.cs": {
+      "Cocktails.API.Migrations.Migration10": {
+        "System.Void Cocktails.API.Migrations.Migration10::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "179": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "188": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "201": 0,
+            "202": 0,
+            "203": 0,
+            "204": 0,
+            "205": 0,
+            "207": 0,
+            "208": 0,
+            "209": 0,
+            "210": 0,
+            "211": 0,
+            "212": 0,
+            "213": 0,
+            "214": 0,
+            "216": 0,
+            "217": 0,
+            "218": 0,
+            "219": 0,
+            "221": 0,
+            "222": 0,
+            "223": 0,
+            "224": 0,
+            "225": 0,
+            "226": 0,
+            "227": 0,
+            "228": 0,
+            "230": 0,
+            "231": 0,
+            "232": 0,
+            "233": 0,
+            "234": 0,
+            "235": 0,
+            "237": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Migrations\\CocktailContextModelSnapshot.cs": {
+      "Cocktails.API.Migrations.CocktailContextModelSnapshot": {
+        "System.Void Cocktails.API.Migrations.CocktailContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "15": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "188": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "201": 0,
+            "202": 0,
+            "203": 0,
+            "205": 0,
+            "206": 0,
+            "207": 0,
+            "208": 0,
+            "209": 0,
+            "210": 0,
+            "211": 0,
+            "212": 0,
+            "214": 0,
+            "215": 0,
+            "216": 0,
+            "217": 0,
+            "219": 0,
+            "220": 0,
+            "221": 0,
+            "222": 0,
+            "223": 0,
+            "224": 0,
+            "225": 0,
+            "226": 0,
+            "228": 0,
+            "229": 0,
+            "230": 0,
+            "231": 0,
+            "232": 0,
+            "233": 0,
+            "235": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\DTO\\AutoMapping.cs": {
+      "Cocktails.API.DTO.AutoMapping": {
+        "System.Void Cocktails.API.DTO.AutoMapping::.ctor()": {
+          "Lines": {
+            "9": 2,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\DTO\\CategoryDTO.cs": {
+      "Cocktails.API.DTO.CategoryDTO": {
+        "System.Int32 Cocktails.API.DTO.CategoryDTO::get_CategoryId()": {
+          "Lines": {
+            "10": 12
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.DTO.CategoryDTO::get_Name()": {
+          "Lines": {
+            "11": 12
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.DTO.AddCategoryDTO": {
+        "System.String Cocktails.API.DTO.AddCategoryDTO::get_Name()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.DTO.UpdateCategoryDTO": {
+        "System.String Cocktails.API.DTO.UpdateCategoryDTO::get_Name()": {
+          "Lines": {
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\DTO\\CocktailDTO.cs": {
+      "Cocktails.API.DTO.CocktailDTO": {
+        "System.String Cocktails.API.DTO.CocktailDTO::get_Name()": {
+          "Lines": {
+            "10": 8
+          },
+          "Branches": []
+        },
+        "System.Boolean Cocktails.API.DTO.CocktailDTO::get_Alcoholic()": {
+          "Lines": {
+            "11": 7
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.DTO.CocktailDTO::get_Description()": {
+          "Lines": {
+            "13": 7
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.Int32> Cocktails.API.DTO.CocktailDTO::get_Categories()": {
+          "Lines": {
+            "15": 8
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.Guid> Cocktails.API.DTO.CocktailDTO::get_Ingredients()": {
+          "Lines": {
+            "16": 8
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.String> Cocktails.API.DTO.CocktailDTO::get_ImageEncoded()": {
+          "Lines": {
+            "18": 8
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.String> Cocktails.API.DTO.CocktailDTO::get_Extension()": {
+          "Lines": {
+            "19": 7
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.DTO.CocktailUpdateDTO": {
+        "System.String Cocktails.API.DTO.CocktailUpdateDTO::get_Name()": {
+          "Lines": {
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.DTO.CocktailUpdateDTO::get_Description()": {
+          "Lines": {
+            "25": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Cocktails.API.DTO.CocktailUpdateDTO::get_Alcoholic()": {
+          "Lines": {
+            "26": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.DTO.AddCocktailImagesDTO": {
+        "System.Collections.Generic.List`1<System.String> Cocktails.API.DTO.AddCocktailImagesDTO::get_EncodedImages()": {
+          "Lines": {
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.String> Cocktails.API.DTO.AddCocktailImagesDTO::get_Extensions()": {
+          "Lines": {
+            "32": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\DTO\\ImageDTO.cs": {
+      "Cocktails.API.DTO.ImageDTO": {
+        "System.Collections.Generic.List`1<System.String> Cocktails.API.DTO.ImageDTO::get_EncodedImages()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.String> Cocktails.API.DTO.ImageDTO::get_Extensions()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\DTO\\IngredientDTO.cs": {
+      "Cocktails.API.DTO.IngredientDTO": {
+        "System.Guid Cocktails.API.DTO.IngredientDTO::get_IngredientId()": {
+          "Lines": {
+            "10": 9
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.DTO.IngredientDTO::get_Name()": {
+          "Lines": {
+            "11": 9
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.DTO.IngredientDTO::get_Description()": {
+          "Lines": {
+            "12": 9
+          },
+          "Branches": []
+        },
+        "System.Int32 Cocktails.API.DTO.IngredientDTO::get_AlcoholPercentage()": {
+          "Lines": {
+            "13": 9
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Cocktails.API.Models.IngredientImage> Cocktails.API.DTO.IngredientDTO::get_Images()": {
+          "Lines": {
+            "14": 12
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.DTO.AddIngredientDTO": {
+        "System.String Cocktails.API.DTO.AddIngredientDTO::get_Name()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.DTO.AddIngredientDTO::get_Description()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Cocktails.API.DTO.AddIngredientDTO::get_AlcoholPercentage()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.String> Cocktails.API.DTO.AddIngredientDTO::get_EncodedImages()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.String> Cocktails.API.DTO.AddIngredientDTO::get_Extensions()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.DTO.UpdateIngredientDTO": {
+        "System.String Cocktails.API.DTO.UpdateIngredientDTO::get_Name()": {
+          "Lines": {
+            "28": 0
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.DTO.UpdateIngredientDTO::get_Description()": {
+          "Lines": {
+            "29": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Cocktails.API.DTO.UpdateIngredientDTO::get_AlcoholPercentage()": {
+          "Lines": {
+            "30": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\DataContext\\CocktailContext.cs": {
+      "Cocktails.API.DataContext.CocktailContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<Cocktails.API.Models.Category> Cocktails.API.DataContext.CocktailContext::get_Category()": {
+          "Lines": {
+            "25": 13
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Cocktails.API.Models.Ingredient> Cocktails.API.DataContext.CocktailContext::get_Ingredients()": {
+          "Lines": {
+            "26": 13
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Cocktails.API.Models.Cocktail> Cocktails.API.DataContext.CocktailContext::get_Cocktails()": {
+          "Lines": {
+            "27": 14
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Cocktails.API.Models.CocktailCategory> Cocktails.API.DataContext.CocktailContext::get_CocktailCategories()": {
+          "Lines": {
+            "28": 12
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Cocktails.API.Models.CocktailIngredient> Cocktails.API.DataContext.CocktailContext::get_CocktailIngredients()": {
+          "Lines": {
+            "29": 12
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Cocktails.API.Models.CocktailImage> Cocktails.API.DataContext.CocktailContext::get_CocktailImages()": {
+          "Lines": {
+            "30": 12
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Cocktails.API.Models.IngredientImage> Cocktails.API.DataContext.CocktailContext::get_IngredientImages()": {
+          "Lines": {
+            "31": 12
+          },
+          "Branches": []
+        },
+        "System.Void Cocktails.API.DataContext.CocktailContext::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)": {
+          "Lines": {
+            "40": 4,
+            "41": 8,
+            "42": 4,
+            "43": 4
+          },
+          "Branches": []
+        },
+        "System.Void Cocktails.API.DataContext.CocktailContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "46": 1,
+            "47": 1,
+            "48": 1,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1,
+            "56": 1,
+            "57": 1,
+            "58": 1,
+            "59": 1,
+            "60": 1,
+            "61": 1,
+            "62": 1,
+            "63": 1,
+            "64": 1,
+            "74": 1,
+            "75": 1,
+            "76": 1,
+            "77": 1,
+            "78": 1,
+            "79": 1,
+            "80": 1,
+            "81": 1,
+            "82": 1,
+            "83": 1,
+            "84": 1,
+            "85": 1,
+            "86": 1,
+            "87": 1,
+            "88": 1,
+            "89": 1,
+            "90": 1,
+            "91": 1,
+            "92": 1,
+            "93": 1,
+            "94": 1,
+            "95": 1
+          },
+          "Branches": []
+        },
+        "System.Void Cocktails.API.DataContext.CocktailContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<Cocktails.API.DataContext.CocktailContext>,Microsoft.Extensions.Options.IOptions`1<Cocktails.API.Config.ConnectionStrings>)": {
+          "Lines": {
+            "34": 12,
+            "35": 12,
+            "36": 12,
+            "37": 12
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Controllers\\CocktailController.cs": {
+      "Cocktails.API.Controllers.CocktailController": {
+        "System.Void Cocktails.API.Controllers.CocktailController::.ctor(Microsoft.Extensions.Logging.ILogger`1<Cocktails.API.Controllers.CocktailController>,Cocktails.API.Services.ICocktailService)": {
+          "Lines": {
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 4,
+            "23": 4
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<GetCategories>d__3": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<GetCategories>d__3::MoveNext()": {
+          "Lines": {
+            "27": 1,
+            "31": 1,
+            "32": 1,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 1
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<GetCategory>d__4": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<GetCategory>d__4::MoveNext()": {
+          "Lines": {
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "53": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<GetIngredients>d__5": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<GetIngredients>d__5::MoveNext()": {
+          "Lines": {
+            "58": 1,
+            "60": 1,
+            "61": 1,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "68": 1
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<GetIngredient>d__6": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<GetIngredient>d__6::MoveNext()": {
+          "Lines": {
+            "72": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "82": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<GetCocktails>d__7": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<GetCocktails>d__7::MoveNext()": {
+          "Lines": {
+            "86": 1,
+            "88": 1,
+            "89": 1,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "96": 1
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<GetCocktail>d__8": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<GetCocktail>d__8::MoveNext()": {
+          "Lines": {
+            "100": 0,
+            "102": 0,
+            "103": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "110": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<AddCocktail>d__9": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<AddCocktail>d__9::MoveNext()": {
+          "Lines": {
+            "115": 1,
+            "116": 1,
+            "117": 1,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "123": 1
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<AddIngredient>d__10": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<AddIngredient>d__10::MoveNext()": {
+          "Lines": {
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "136": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<AddCategory>d__11": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<AddCategory>d__11::MoveNext()": {
+          "Lines": {
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "149": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<DeleteCocktail>d__12": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<DeleteCocktail>d__12::MoveNext()": {
+          "Lines": {
+            "154": 0,
+            "156": 0,
+            "157": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "164": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<UpdateCocktail>d__13": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<UpdateCocktail>d__13::MoveNext()": {
+          "Lines": {
+            "169": 0,
+            "171": 0,
+            "172": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "179": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<UpdateCategory>d__14": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<UpdateCategory>d__14::MoveNext()": {
+          "Lines": {
+            "184": 0,
+            "186": 0,
+            "187": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "194": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<UpdateIngredient>d__15": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<UpdateIngredient>d__15::MoveNext()": {
+          "Lines": {
+            "199": 0,
+            "201": 0,
+            "202": 0,
+            "204": 0,
+            "205": 0,
+            "206": 0,
+            "207": 0,
+            "209": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<AddCocktailImages>d__16": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<AddCocktailImages>d__16::MoveNext()": {
+          "Lines": {
+            "214": 0,
+            "216": 0,
+            "217": 0,
+            "219": 0,
+            "220": 0,
+            "221": 0,
+            "222": 0,
+            "224": 0
+          },
+          "Branches": []
+        }
+      },
+      "Cocktails.API.Controllers.CocktailController/<AddIngredientImages>d__17": {
+        "System.Void Cocktails.API.Controllers.CocktailController/<AddIngredientImages>d__17::MoveNext()": {
+          "Lines": {
+            "229": 0,
+            "231": 0,
+            "232": 0,
+            "234": 0,
+            "235": 0,
+            "236": 0,
+            "237": 0,
+            "239": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Controllers\\WeatherForecastController.cs": {
+      "Cocktails.API.Controllers.WeatherForecastController": {
+        "System.Collections.Generic.IEnumerable`1<Cocktails.API.WeatherForecast> Cocktails.API.Controllers.WeatherForecastController::Get()": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        },
+        "System.Void Cocktails.API.Controllers.WeatherForecastController::.ctor(Microsoft.Extensions.Logging.ILogger`1<Cocktails.API.Controllers.WeatherForecastController>)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.Void Cocktails.API.Controllers.WeatherForecastController::.cctor()": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\src\\cocktail-api\\Cocktails.API\\Config\\ConnectionStrings.cs": {
+      "Cocktails.API.Config.ConnectionStrings": {
+        "System.String Cocktails.API.Config.ConnectionStrings::get_SQL()": {
+          "Lines": {
+            "7": 6
+          },
+          "Branches": []
+        },
+        "System.String Cocktails.API.Config.ConnectionStrings::get_BlobStorage()": {
+          "Lines": {
+            "8": 2
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

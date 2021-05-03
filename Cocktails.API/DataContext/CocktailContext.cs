@@ -63,14 +63,6 @@ namespace Cocktails.API.DataContext
                 Name = "Strong"
             });
 
-            // modelBuilder.Entity<Cocktail>().HasData(new Cocktail()
-            // {
-            //     CocktailId = new Guid(),
-            //     Name = "Test Cocktail",
-            //     Alcoholic = true
-            // });
-
-
             modelBuilder.Entity<Ingredient>().HasData(new Ingredient()
             {
                 IngredientId = Guid.NewGuid(),

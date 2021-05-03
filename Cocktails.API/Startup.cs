@@ -6,6 +6,7 @@ using Cocktails.API.Config;
 using Cocktails.API.DataContext;
 using Cocktails.API.Repositories;
 using Cocktails.API.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,6 +37,14 @@ namespace Cocktails.API
             services.AddDbContext<CocktailContext>();
 
             services.AddControllers();
+
+            services.AddAuthentication(option => {
+                option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options => {
+                options.Authority = "https://dev-brct8q7e.eu.auth0.com/";
+                options.Audience = "https://cocktailapi";
+            });
             
 
             services.AddSwaggerGen(c =>
@@ -65,6 +74,7 @@ namespace Cocktails.API
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
